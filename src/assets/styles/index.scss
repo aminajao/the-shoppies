@@ -1,0 +1,179 @@
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.container {
+  background-color: rgba($color: #d1fd7f, $alpha: 0.24);
+  color: #000;
+  padding-bottom: 100px !important;
+}
+
+// header also known as navbar
+.header {
+  padding: 25px;
+  margin: 0 100px;
+  display: flex;
+  justify-content: space-between;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  ul li {
+    padding: 0 10px;
+  }
+  ul li a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.856);
+  }
+}
+// this is the hero section containing the search input field
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+
+  &__header {
+    font-size: 48px;
+    text-align: center;
+    padding-bottom: 15px;
+  }
+  &__search {
+    margin-top: 30px;
+  }
+  &__search--input {
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    border: 0px;
+    background: url("../images/Search.svg") no-repeat scroll 10px 16px;
+    padding-left: 50px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #595454;
+  }
+  &__search--button {
+    padding: 18px 50px;
+    border: 0px;
+    cursor: pointer;
+    margin-left: 10px;
+    color: #e5feb5;
+    border-radius: 8px;
+    background-color: #5e8e3e;
+    letter-spacing: 2px;
+    font-size: 18px;
+  }
+}
+.illustration__small {
+  position: absolute;
+  left: 0;
+  top: 150px;
+  width: 200px;
+}
+.illustration__large {
+  position: absolute;
+  right: 0;
+  top: 100px;
+  width: 200px;
+}
+
+// container for both the search result and nominations
+.content__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 50px;
+  grid-row-gap: 0px;
+  margin: 0 125px;
+  // margin-top: 10px;
+}
+.result__container,
+.nomination__container {
+  border: 2px solid #5e8e3e;
+  min-height: 200px;
+  border-radius: 20px;
+  padding: 20px;
+}
+.nomination__container {
+  max-height: 500px;
+}
+
+.result__container--header {
+  padding-bottom: 10px;
+}
+
+.movie__card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  // border: 1px solid red;
+  // margin: 10px 0;
+
+  &--left {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+
+    :first-child {
+      margin-right: 20px;
+    }
+  }
+
+  &--header,
+  &--year {
+    padding: 5px;
+  }
+
+  &--image-container {
+    width: 70px;
+    
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      height: 90px;
+    }
+  }
+}
+
+.btn {
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #fff;
+}
+.nominate {
+  background-color: #5E8E3E;
+  color: #E5FEB5;
+  border: 0px;
+}
+.nominated,
+.nominated:hover {
+  border: 0px;
+  cursor: not-allowed !important;
+  pointer-events: none;
+  color: #c0c0c0;
+  background-color: #ffffff;
+}
+.remove {
+  border: 1px solid #5e8e3e;
+  background-color: inherit;
+  color: #5E8E3E;
+}
