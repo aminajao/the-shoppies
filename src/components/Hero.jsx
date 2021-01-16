@@ -11,7 +11,7 @@ function Hero(props) {
         setSearchValue(e.target.value);
         console.log(e.target.value)
     }
-
+    
     const resetInputField = () => {
         setSearchValue("")
     }
@@ -29,7 +29,7 @@ function Hero(props) {
             </h1>
             <div className="hero__search">
                 <form onSubmit={callSearchFunction}>
-                    <input value={searchValue} onChange={handleSearchInputChanges} type="search" placeholder="Search for movies" className="hero__search--input" />
+                    <input required value={searchValue} onChange={handleSearchInputChanges} type="search" placeholder="Search for movies" className="hero__search--input" />
                     <input type="submit" className="hero__search--button" value="Search" />
                 </form>
             </div>

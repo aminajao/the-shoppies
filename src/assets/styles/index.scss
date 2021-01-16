@@ -111,7 +111,7 @@ select {
   padding: 20px;
 }
 .nomination__container {
-  max-height: 500px;
+  max-height: 700px;
 }
 
 .result__container--header {
@@ -177,3 +177,49 @@ select {
   background-color: inherit;
   color: #5E8E3E;
 }
+
+.limit__value {
+  color: #5E8E3E;
+}
+
+.alert__container {
+  background-color: #d1fd7f;
+  padding: 25px;
+  margin: 0 300px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+
+// .disabled {
+//   pointer-events: none;
+//   cursor: not-allowed;
+//   // background-color: $outlinedark;
+//   // border-color: $outlinedark;
+
+//   &:after {
+//     content: "";
+//     display: block;
+//     position: absolute;
+//     top: -36px;
+//     left: -100px;
+//     background: white;
+//     width: 50px;
+//     height: 125px;
+//     opacity: 20%;
+//     transform: rotate(-45deg);
+//     transition: left 1s cubic-bezier(0.3, 1, 0.2, 1);
+//   }
+
+//   &:hover:after {
+//     left: 120%;
+//     transition: all 1s cubic-bezier(0.3, 1, 0.2, 1);
+//     -webkit-transition: all 1s cubic-bezier(0.3, 1, 0.2, 1);
+//   }
+// }
+
+.limit-reached {
+  // background-color: darken($color: $primary, $amount: 30);
+  background-color: red;
+}
+

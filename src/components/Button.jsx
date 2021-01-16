@@ -1,10 +1,17 @@
 import React from 'react'
 
-function Button({text, buttonClass}) {
+function Button({ text, nominationStatus, btnClass, limit, clickEvent }) {
     return (
-        <button className={`${buttonClass} btn remove`}>
-            {text}
+
+        <button disabled={nominationStatus} onClick={clickEvent} className={`${btnClass} btn remove`}>
+            {
+                nominationStatus == true ? (
+                    <>Nominated</>
+                ) : limit === 0 ? <>Limit Reached</> : <>{text}</>
+            }
+
         </button>
+
     )
 }
 
