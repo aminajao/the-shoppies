@@ -65,6 +65,7 @@ function App() {
 
   const nominateMovie = (movie) => {
     
+    if(nominations.length === 5 ) return;
     const newMoviesArray = [movie, ...nominations];
     setNominations(newMoviesArray);
 
@@ -77,6 +78,15 @@ function App() {
     // update local storage limit
     localStorage.setItem("limit", limit - 1);
   };
+
+  function validateNomination(movie) {
+    let checkNominations = nominations.some((i) => i.imdbID.includes(movie.imdbID));
+    if(checkNominations) {
+        alert('Hm, looks like you already nominated this dude.')
+    } else {
+        nominateMovie(movie)
+    }
+}
 
   const removeNomination = (movie) => {
     const availableNominations = nominations.filter(
@@ -119,7 +129,7 @@ function App() {
             <div className="errorMessage">{errorMessage}</div>
           ) : <ResultContainer
                 movies={movies}
-                nominateMovie={nominateMovie}
+                validateNomination={validateNomination}
                 limit={limit}
                 nominations={nominations}
               />

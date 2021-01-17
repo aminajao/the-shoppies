@@ -1,5 +1,4 @@
 import React from 'react';
-import Img from "../assets/images/img.jpeg"
 import Button from "./Button";
 
 const DEFAULT_PLACEHOLDER_IMAGE =

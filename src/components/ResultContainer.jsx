@@ -2,7 +2,7 @@ import React from 'react';
 import MovieCard from "./MovieCard";
 
 
-function ResultContainer({ nominations, limit, movies, nominateMovie }) {
+function ResultContainer({ nominations, limit, movies, validateNomination }) {
     const nominationStatus = () => {
         const isNominated = nominations.filter(nominated => nominated.imdbID === movies.imdbID
         );
@@ -35,7 +35,7 @@ function ResultContainer({ nominations, limit, movies, nominateMovie }) {
                            title={movie.Title}
                            year={movie.Year}
                            img={movie.Poster}
-                           clickEvent={nominateMovie}
+                           clickEvent={validateNomination}
                            movie={movie}
                            text="Nominate"
                            btnClass={btnClass}
