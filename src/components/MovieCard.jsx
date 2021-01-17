@@ -9,7 +9,7 @@ function MovieCard({ nominationStatus, btnClass, text, title, year, img, movie, 
         <div className="movie__card">
             <div className="movie__card--left">
                 <div className="movie__card--image-container">
-                    <img className="movie__card--image" src={img === "N/A" ? DEFAULT_PLACEHOLDER_IMAGE : img} />
+                    <img alt="movie poster" className="movie__card--image" src={img === "N/A" ? DEFAULT_PLACEHOLDER_IMAGE : img} />
                 </div>
                 <div>
                     <h4 className="movie__card--header">

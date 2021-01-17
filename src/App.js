@@ -33,7 +33,7 @@ function App() {
       ? localStorage.setItem("limit", 5)
       : setLimit(Number(storedLimit));
 
-
+       // eslint-disable-line react-hooks/exhaustive-deps
   }, [])
 
 

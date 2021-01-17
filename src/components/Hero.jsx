@@ -11,7 +11,7 @@ function Hero(props) {
         setSearchValue(e.target.value);
         console.log(e.target.value)
     }
-    
+
     const resetInputField = () => {
         setSearchValue("")
     }
@@ -34,8 +34,8 @@ function Hero(props) {
                 </form>
             </div>
 
-            <img className="illustration__small" src={IllustrationSmall} />
-            <img className="illustration__large" src={IllustrationLarge} />
+            <img className="illustration__small" alt="illustration " src={IllustrationSmall} />
+            <img className="illustration__large" alt="illustration" src={IllustrationLarge} />
         </div>
     )
 }
