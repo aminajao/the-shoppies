@@ -6,21 +6,28 @@ function ResultContainer({ nominations, limit, movies, validateNomination }) {
     const nominationStatus = () => {
         const isNominated = nominations.filter(nominated => nominated.imdbID === movies.imdbID
         );
-    
+
         return isNominated.length > 0;
-      };
-    
-      const btnClass = () => {
+    };
+
+    const btnClass = () => {
         const check = nominationStatus();
-    
+
         if (check) {
-          return "disabled";
+            return "disabled";
         } else if (limit === 0) {
-          return " disabled limit-reached";
+            return " disabled limit-reached";
         } else {
-          return "";
+            return "";
         }
-      };
+    };
+    // const btnValue = () => {
+    //     const check = nominationStatus();
+    //     if (check) {
+    //         return "Nominated";
+    //     } else return "Nominate"
+    // };
+
     return (
 
         <div className="result__container">
@@ -28,18 +35,19 @@ function ResultContainer({ nominations, limit, movies, validateNomination }) {
             <hr />
             <div >
                 {
-                    
+
                     movies.map((movie) => (
                         <MovieCard
-                           key={movie.imdbID} 
-                           title={movie.Title}
-                           year={movie.Year}
-                           img={movie.Poster}
-                           clickEvent={validateNomination}
-                           movie={movie}
-                           text="Nominate"
-                           btnClass={btnClass}
-                           nominationStatus={nominationStatus}
+                            key={movie.imdbID}
+                            title={movie.Title}
+                            year={movie.Year}
+                            img={movie.Poster}
+                            clickEvent={validateNomination}
+                            movie={movie}
+                            text="Nominate"
+                            // btnClass={btnClass}
+                            // btnValue={btnValue}
+                            nominationStatus={nominationStatus}
                         />
                     ))
                 }

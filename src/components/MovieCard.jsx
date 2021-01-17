@@ -4,7 +4,7 @@ import Button from "./Button";
 const DEFAULT_PLACEHOLDER_IMAGE =
   "https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_SX300.jpg";
 
-function MovieCard({ nominationStatus, btnClass, text, title, year, img, movie, clickEvent, removeNomination }) {
+function MovieCard({ btnValue, nominationStatus, btnClass, text, title, year, img, movie, clickEvent, removeNomination }) {
     return (
         <div className="movie__card">
             <div className="movie__card--left">
@@ -20,6 +20,7 @@ function MovieCard({ nominationStatus, btnClass, text, title, year, img, movie, 
             </div>
             <Button
                 text={text}
+                btnValue={btnValue}
                 removeNomination={removeNomination}
                 clickEvent={() => clickEvent(movie)}
                 // nominationStatus={nominationStatus}

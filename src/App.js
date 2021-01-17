@@ -81,8 +81,12 @@ function App() {
 
   function validateNomination(movie) {
     let checkNominations = nominations.some((i) => i.imdbID.includes(movie.imdbID));
+    if (limit === 0) {
+      alert("Nomination limit reached")
+      
+    }
     if(checkNominations) {
-        alert('Hm, looks like you already nominated this dude.')
+        alert('Hm, looks like you already nominated this movie.')
     } else {
         nominateMovie(movie)
     }
